@@ -1,0 +1,636 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Sublime," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="快捷键
+line相关：Ctrl+Shift+D：复制当前行Ctrl+Shift+K：删除当前行Ctrl+j 合并一行Ctrl+Enter：在当前行下添加新行。AfterCtrl+Shift+Enter：在当前行上添加新行。BeforeCtrl+Shift+上、下：移动当前行
+Comment注释：Ctrl+/：行注释。Ctrl+Shift+/：块注释
+Ctrl+Shift+P：调用命令面板，快速查找">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sublime Text3不完全使用指南">
+<meta property="og:url" content="http://yoursite.com/2016/05/26/2016-05-26-sublime-text3/index.html">
+<meta property="og:site_name" content="KI9I9">
+<meta property="og:description" content="快捷键
+line相关：Ctrl+Shift+D：复制当前行Ctrl+Shift+K：删除当前行Ctrl+j 合并一行Ctrl+Enter：在当前行下添加新行。AfterCtrl+Shift+Enter：在当前行上添加新行。BeforeCtrl+Shift+上、下：移动当前行
+Comment注释：Ctrl+/：行注释。Ctrl+Shift+/：块注释
+Ctrl+Shift+P：调用命令面板，快速查找">
+<meta property="og:image" content="http://guowenfh.github.io/images/SublimeText/Color_Highlighter.jpg">
+<meta property="og:updated_time" content="2016-11-28T16:21:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sublime Text3不完全使用指南">
+<meta name="twitter:description" content="快捷键
+line相关：Ctrl+Shift+D：复制当前行Ctrl+Shift+K：删除当前行Ctrl+j 合并一行Ctrl+Enter：在当前行下添加新行。AfterCtrl+Shift+Enter：在当前行上添加新行。BeforeCtrl+Shift+上、下：移动当前行
+Comment注释：Ctrl+/：行注释。Ctrl+Shift+/：块注释
+Ctrl+Shift+P：调用命令面板，快速查找">
+<meta name="twitter:image" content="http://guowenfh.github.io/images/SublimeText/Color_Highlighter.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Sublime Text3不完全使用指南 | KI9I9 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">KI9I9</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Sublime Text3不完全使用指南
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-26T20:21:07+08:00" content="2016-05-26">
+              2016-05-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index">
+                    <span itemprop="name">Tool</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><ul>
+<li><code>line</code>相关：<code>Ctrl+Shift+D</code>：复制当前行<code>Ctrl+Shift+K</code>：删除当前行<code>Ctrl+j</code> 合并一行<code>Ctrl+Enter</code>：在当前行下添加新行。After<code>Ctrl+Shift+Enter</code>：在当前行上添加新行。Before<code>Ctrl+Shift+上、下</code>：移动当前行</li>
+<li><code>Comment</code>注释：<code>Ctrl+/</code>：行注释。<code>Ctrl+Shift+/</code>：块注释</li>
+<li><code>Ctrl+Shift+P</code>：调用命令面板，快速查找，例如：改变语法模式等。模糊匹配，可以减少对快捷键的记忆。</li>
+<li>Shift+Alt+1，2，3，4，5：开启对应数字的多栏编辑</li>
+</ul>
+<ul>
+<li><code>Ctrl+P</code> Goto Anything： 查找项目中的文件：直接输入名称：在不同文件中切换，支持级联的目录模式<code>:</code>：+ 行号：<code>Ctrl+G</code> 定位到具体的行。<code>@</code>：+ 符号：<code>Ctrl+R</code>定位到具体的符号，例如：JS函数名，CSS选择器名。<code>#</code>：+ 关键字：<code>Ctrl+;</code>匹配到具体的匹配的关键字。主要是模糊匹配。</li>
+</ul>
+<h3 id="插件的安装与使用"><a href="#插件的安装与使用" class="headerlink" title="插件的安装与使用"></a>插件的安装与使用</h3><h4 id="安装package-control。"><a href="#安装package-control。" class="headerlink" title="安装package control。"></a>安装<code>package control</code>。</h4><a id="more"></a>
+<p>这里我使用的是<code>sublimeText 3</code>，首先打开<code>package control</code>的<a href="https://packagecontrol.io/installation" target="_blank" rel="external">官方网站</a>。<br>复制下面这一段代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import urllib.request,os,hashlib; h = &apos;2915d1851351e5ee549c20394736b442&apos; + &apos;8bc59f460fa1548d1514676163dafc88&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)</div></pre></td></tr></table></figure>
+<p>在上面说的<code>View</code>–&gt;<code>Show console</code>,快捷键： Ctrl+<code>打开控制台窗口，粘贴上面的代码，回车，然后就是等待安装了，需要一定的时间，安装完成后重启 。</code> </p>
+<p>使用<code>Ctrl+Shift+P</code> 可以打开控制面板。</p>
+<h3 id="个人常用插件及使用方法"><a href="#个人常用插件及使用方法" class="headerlink" title="个人常用插件及使用方法"></a>个人常用插件及使用方法</h3><h4 id="1-JavaScript-Next：完美支持ECMAScript-6"><a href="#1-JavaScript-Next：完美支持ECMAScript-6" class="headerlink" title="1. JavaScript Next：完美支持ECMAScript 6"></a><code>1. JavaScript Next</code>：完美支持ECMAScript 6</h4><ul>
+<li>JavaScript Next 提供了比默认JavaScript Package更好的语法高亮，而且他完美支持ECMAScript 6。如果你知道ECMAScript 6，或许也感受过默认安装的Sublime Text不支持modules，succinct methods, arrow functions, classes, generators, and accessors 带来的不便。</li>
+<li>建议<strong>完全使用</strong> JavaScript Next代替JavaScript Package。</li>
+</ul>
+<h4 id="2-CSS3-CSS3语法高亮"><a href="#2-CSS3-CSS3语法高亮" class="headerlink" title="2.CSS3:CSS3语法高亮"></a><code>2.CSS3</code>:CSS3语法高亮</h4><ul>
+<li>默认安装的Sublime Text对CSS3的支持让人抓狂，帧动画？别开玩笑了你只会看到一片白色的纯文本一样的代码。</li>
+<li>事实上不光CSS3，我建议用CSS3 Package完全替代原来的CSS Package来完成语法高亮。把原来的禁用了吧。</li>
+</ul>
+<h4 id="3-Color-Highlighter-：CSS颜色高亮"><a href="#3-Color-Highlighter-：CSS颜色高亮" class="headerlink" title="3. Color Highlighter ：CSS颜色高亮"></a><code>3. Color Highlighter</code> ：CSS颜色高亮</h4><ul>
+<li>Color Highlighter这个插件会检测CSS文件中的颜色码，不论是Hex码或者RGB码都能很好的显示。</li>
+<li>Color Highlighter能够设置成用背景色或者边框提示颜色，在Settings里做这样的设置：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;ha_style&quot;: &quot;filled&quot;,</div><div class="line">  &quot;icons&quot;: false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><a href="http://guowenfh.github.io/images/SublimeText/Color_Highlighter.jpg" target="_blank" rel="external"><img src="http://guowenfh.github.io/images/SublimeText/Color_Highlighter.jpg" alt="Color Highlighter"></a></p>
+<h4 id="4-ColorPicker"><a href="#4-ColorPicker" class="headerlink" title="4.ColorPicker"></a><code>4.ColorPicker</code></h4><p>Color Highlighter配合<a href="https://sublime.wbond.net/packages/ColorPicker" target="_blank" rel="external">ColorPicker</a>插件，提高处理颜色效率。快捷键如下：<br><strong>Linux</strong>: ctrl+shift+c<br><strong>Windows</strong>: ctrl+shift+c<br><strong>OS X</strong>: cmd+shift+c</p>
+<p>(注意：快捷键有冲突，需修改。)</p>
+<h4 id="5-Prettify"><a href="#5-Prettify" class="headerlink" title="5.Prettify"></a><code>5.Prettify</code></h4><p>HTML、CSS、JS、JSON…..<strong>Ctrl+Shift+H</strong> 一键就能格式化了。</p>
+<h4 id="6-Sidebar-Enhancements：增强侧边栏。"><a href="#6-Sidebar-Enhancements：增强侧边栏。" class="headerlink" title="6.Sidebar Enhancements：增强侧边栏。"></a><code>6.Sidebar Enhancements</code>：增强侧边栏。</h4><ul>
+<li><p>必装插件，无比强大。可以在浏览器中打开，还可以配置不同文件的打开方式。</p>
+<p>单单下面这一个功能就必须安装了！快捷在不同浏览器打开：</p>
+<p>配置设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">	&#123;&quot;id&quot;: &quot;side-bar-files-open-with&quot;,</div><div class="line">		&quot;children&quot;:</div><div class="line">		[</div><div class="line">			//application 1&apos;</div><div class="line">			&#123;</div><div class="line">				&quot;caption&quot;: &quot;Photoshop&quot;,</div><div class="line">				&quot;id&quot;: &quot;side-bar-files-open-with-photoshop&quot;,</div><div class="line"></div><div class="line">				&quot;command&quot;: &quot;side_bar_files_open_with&quot;,</div><div class="line">				&quot;args&quot;: &#123;</div><div class="line">									&quot;paths&quot;: [],</div><div class="line">									&quot;application&quot;: &quot;D:\\Program Files\\Adobe\\Adobe Photoshop CS6 (64 Bit)\\Photoshop.exe&quot;,</div><div class="line">									&quot;extensions&quot;:&quot;.*&quot;, //any file with extension</div><div class="line">									&quot;args&quot;:[]</div><div class="line">						&#125;,</div><div class="line">				&quot;open_automatically&quot; : false // will close the view/tab and launch the application</div><div class="line">			&#125;,</div><div class="line">			//separator</div><div class="line">			&#123;&quot;caption&quot;:&quot;-&quot;&#125;,</div><div class="line"></div><div class="line">			//application 2</div><div class="line">			&#123;</div><div class="line">				&quot;caption&quot;: &quot;Chrome&quot;,</div><div class="line">				&quot;id&quot;: &quot;side-bar-files-open-with-chrome&quot;,</div><div class="line"></div><div class="line">				&quot;command&quot;: &quot;side_bar_files_open_with&quot;,</div><div class="line">				&quot;args&quot;: &#123;</div><div class="line">									&quot;paths&quot;: [],</div><div class="line">									&quot;application&quot;: &quot;C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe&quot;,</div><div class="line">									&quot;extensions&quot;:&quot;.*&quot;, //any file with extension</div><div class="line">									&quot;args&quot;:[]</div><div class="line">						&#125;,</div><div class="line">				&quot;open_automatically&quot; : false // will close the view/tab and launch the application</div><div class="line">			&#125;,</div><div class="line"></div><div class="line">			//application 3</div><div class="line">			&#123;</div><div class="line">				&quot;caption&quot;: &quot;FireFox&quot;,</div><div class="line">				&quot;id&quot;: &quot;side-bar-files-open-with-firefox&quot;,</div><div class="line"></div><div class="line">				&quot;command&quot;: &quot;side_bar_files_open_with&quot;,</div><div class="line">				&quot;args&quot;: &#123;</div><div class="line">									&quot;paths&quot;: [],</div><div class="line">									&quot;application&quot;: &quot;D:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe&quot;,</div><div class="line">									&quot;extensions&quot;:&quot;.*&quot;, //any file with extension</div><div class="line">									&quot;args&quot;:[]</div><div class="line">						&#125;,</div><div class="line">				&quot;open_automatically&quot; : false // will close the view/tab and launch the application</div><div class="line">			&#125;,</div><div class="line"></div><div class="line">			&#123;&quot;caption&quot;:&quot;-&quot;&#125;</div><div class="line">		]</div><div class="line">	&#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+</li>
+<li><p>可选<code>SyncedSideBar</code>：每次打开文件，侧边栏都会同步显示该文件所在目录树中的位置</p>
+<p>​</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Sublime/" rel="tag">#Sublime</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/24/2016-05-24-hexo-blog/" rel="next" title="个人博客搭建小记">
+                <i class="fa fa-chevron-left"></i> 个人博客搭建小记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/03/2016-06-03-clash-royale/" rel="prev" title="那些"皇室战争"教给我的">
+                那些"皇室战争"教给我的 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="KI9I9" />
+          <p class="site-author-name" itemprop="name">KI9I9</p>
+          <p class="site-description motion-element" itemprop="description">心心念念，尝吾所愿</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快捷键"><span class="nav-number">1.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件的安装与使用"><span class="nav-number">2.</span> <span class="nav-text">插件的安装与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装package-control。"><span class="nav-number">2.1.</span> <span class="nav-text">安装package control。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个人常用插件及使用方法"><span class="nav-number">3.</span> <span class="nav-text">个人常用插件及使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-JavaScript-Next：完美支持ECMAScript-6"><span class="nav-number">3.1.</span> <span class="nav-text">1. JavaScript Next：完美支持ECMAScript 6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-CSS3-CSS3语法高亮"><span class="nav-number">3.2.</span> <span class="nav-text">2.CSS3:CSS3语法高亮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Color-Highlighter-：CSS颜色高亮"><span class="nav-number">3.3.</span> <span class="nav-text">3. Color Highlighter ：CSS颜色高亮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-ColorPicker"><span class="nav-number">3.4.</span> <span class="nav-text">4.ColorPicker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Prettify"><span class="nav-number">3.5.</span> <span class="nav-text">5.Prettify</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-Sidebar-Enhancements：增强侧边栏。"><span class="nav-number">3.6.</span> <span class="nav-text">6.Sidebar Enhancements：增强侧边栏。</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">KI9I9</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

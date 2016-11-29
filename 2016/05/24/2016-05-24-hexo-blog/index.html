@@ -1,0 +1,602 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="之前一直有关注池建强的公众号和廖雪峰、阮一峰的博客，觉得有个自己的博客记录点滴成长是十分必要的，于是就有了此篇小记。
+
+  起初是按照阮一峰老师的教程《搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门》 来实践，github Pages部分还好，但ruby、gem和jekyll的安装确实有些繁琐，网上的教程零乱加之gem源被墙（btw 后来用了ruby-chin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人博客搭建小记">
+<meta property="og:url" content="http://yoursite.com/2016/05/24/2016-05-24-hexo-blog/index.html">
+<meta property="og:site_name" content="KI9I9">
+<meta property="og:description" content="之前一直有关注池建强的公众号和廖雪峰、阮一峰的博客，觉得有个自己的博客记录点滴成长是十分必要的，于是就有了此篇小记。
+
+  起初是按照阮一峰老师的教程《搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门》 来实践，github Pages部分还好，但ruby、gem和jekyll的安装确实有些繁琐，网上的教程零乱加之gem源被墙（btw 后来用了ruby-chin">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006fVPCvjw1f47hj8xliwj30du06eq36.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006fVPCvjw1f47hjln5n0j30hs07sdgo.jpg">
+<meta property="og:updated_time" content="2016-11-28T16:22:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="个人博客搭建小记">
+<meta name="twitter:description" content="之前一直有关注池建强的公众号和廖雪峰、阮一峰的博客，觉得有个自己的博客记录点滴成长是十分必要的，于是就有了此篇小记。
+
+  起初是按照阮一峰老师的教程《搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门》 来实践，github Pages部分还好，但ruby、gem和jekyll的安装确实有些繁琐，网上的教程零乱加之gem源被墙（btw 后来用了ruby-chin">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/006fVPCvjw1f47hj8xliwj30du06eq36.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 个人博客搭建小记 | KI9I9 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">KI9I9</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                个人博客搭建小记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-24T18:41:03+08:00" content="2016-05-24">
+              2016-05-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p> 之前一直有关注池建强的公众号和廖雪峰、阮一峰的博客，觉得有个自己的博客记录点滴成长是十分必要的，于是就有了此篇小记。</p>
+</blockquote>
+<p>  起初是按照阮一峰老师的教程<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">《搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门》</a> 来实践，github Pages部分还好，但ruby、gem和jekyll的安装确实有些繁琐，网上的教程零乱加之gem源被墙（btw 后来用了ruby-china的源）等原因走了些弯路，直到找到这个系列教程:<a href="http://www.pchou.info/ssgithubPage/2013-01-03-build-github-blog-page-01.html" target="_blank" rel="external">《一步步在GitHub上创建博客主页》</a>，总算有了个可靠又比较完整的参考。</p>
+<a id="more"></a>
+<p><img src="http://ww3.sinaimg.cn/large/006fVPCvjw1f47hj8xliwj30du06eq36.jpg" alt="jekyll"></p>
+<p>  就这样折腾了两天，无奈不知是不是中间来回修改导致某些配置有些冲突，<a href="http://jekyllbootstrap.com/" target="_blank" rel="external">Jekyll-Bootstrap</a>本地部署测试是ok的，但提交到远程仓后Github邮件提示：”The page build failed with the following error:Page build failed.”访问<a href="http://username.github.io/" target="_blank" rel="external">http://username.github.io/</a> 报404，网上这个问题的资料很少，按照能找到的方法试了还是没解决，正在踌躇时看到了用<a href="https://hexo.io/zh-cn/index.html" target="_blank" rel="external">Hexo</a>搭建博客的教程，简单看了下对Heox的主题比较中意，大家的评价也都不错，鉴于之前已经耗费了不少时间和精力所以果断转战。</p>
+<p><img src="http://ww4.sinaimg.cn/large/006fVPCvjw1f47hjln5n0j30hs07sdgo.jpg" alt="hexo"></p>
+<p> Hexo是一个台湾小哥写的博客框架，官网文档说明很详细，另外参考了<a href="http://eleveneat.com/2015/04/24/Hexo-a-blog/" target="_blank" rel="external">《利用GitHub-Pages来Hexo一个独立博客》</a> ，这次就顺利多了，基于node.js的Hexo安装和配置都比较简单，使用了<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">next</a> 这款主题，初步成果可点击访问<a href="http://ki9i9.github.io/" target="_blank" rel="external">我的博客</a> 。</p>
+<p> 就先这样了，自己的后院有了，可以周末时细细打理一番，现在工作日还是要好好工作啊。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/23/2016-05-23-hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/26/2016-05-26-sublime-text3/" rel="prev" title="Sublime Text3不完全使用指南">
+                Sublime Text3不完全使用指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="KI9I9" />
+          <p class="site-author-name" itemprop="name">KI9I9</p>
+          <p class="site-description motion-element" itemprop="description">心心念念，尝吾所愿</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">KI9I9</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
